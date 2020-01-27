@@ -21,7 +21,7 @@ pizza = StringVar()
 pizza.set("Pepperoni")
 
 for text, mode in MODES:
-    Radiobutton(root, text=text, variable=pizza, value=mode).pack(anchor=W)
+    Radiobutton(root, text=text, variable=pizza, value=mode).pack(anchor=W) # Use indicatoron=0 to get button boxes instead of radio buttons
 
 def clicked(value):
     myLabel = Label(root, text=value)
@@ -35,6 +35,7 @@ def clicked(value):
 
 # myButton = Button(root, text="Click me!", command=lambda: clicked(r.get()))
 # myButton.pack()
+
 
 
 myButton = Button(root, text="Click me!", command=lambda: clicked(pizza.get()))
